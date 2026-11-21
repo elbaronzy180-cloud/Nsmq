@@ -14,5 +14,5 @@
       "onAutoForward": "silent"
     }
   },
-  "postStartCommand": "bash -lc 'nohup node .devcontainer/blaise/agent.mjs >> /tmp/blaise-agent.log 2>&1 &'"
+  "postStartCommand": "bash .devcontainer/blaise/start.sh"
 }

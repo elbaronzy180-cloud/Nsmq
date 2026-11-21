@@ -1,6 +1,9 @@
 {
   "name": "Blaise workspace",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {}
+  },
   "forwardPorts": [
     7777
   ],
@@ -11,5 +14,5 @@
       "onAutoForward": "silent"
     }
   },
-  "postStartCommand": "nohup node .devcontainer/blaise/agent.mjs > /tmp/blaise-agent.log 2>&1 &"
+  "postStartCommand": "bash -lc 'nohup node .devcontainer/blaise/agent.mjs >> /tmp/blaise-agent.log 2>&1 &'"
 }
